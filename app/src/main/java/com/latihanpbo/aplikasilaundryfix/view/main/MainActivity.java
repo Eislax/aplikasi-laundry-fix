@@ -36,6 +36,7 @@ import java.util.List;
 
 import im.delight.android.location.SimpleLocation;
 
+
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     int REQ_PERMISSION = 100;
