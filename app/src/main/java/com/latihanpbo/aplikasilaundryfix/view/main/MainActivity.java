@@ -31,10 +31,12 @@ import com.latihanpbo.aplikasilaundryfix.view.ironing.IroningActivity;
 import com.latihanpbo.aplikasilaundryfix.view.premiumwash.PremiumWashActivity;
 import com.latihanpbo.aplikasilaundryfix.viewmodel.MainViewModel;
 
+import im.delight.android.location.SimpleLocation;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import im.delight.android.location.SimpleLocation;
+
 
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
