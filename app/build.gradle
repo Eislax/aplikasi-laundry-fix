@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
 }
-
 android {
     namespace 'com.latihanpbo.aplikasilaundryfix'
     compileSdk 33
@@ -31,7 +30,7 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     testImplementation 'junit:junit:4.13.2'
@@ -39,8 +38,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     // Lifecycle components
-    implementation 'androidx.lifecycle:lifecycle-livedata:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.6.1'
     implementation "android.arch.lifecycle:extensions:1.1.1"
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
 
@@ -50,9 +49,9 @@ dependencies {
     implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
 
     // Room Database
-    implementation "androidx.room:room-rxjava3:2.3.0"
-    implementation "androidx.room:room-runtime:2.3.0"
-    annotationProcessor "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-rxjava3:2.5.2"
+    implementation "androidx.room:room-runtime:2.5.2"
+    annotationProcessor "androidx.room:room-compiler:2.5.2"
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
@@ -69,5 +68,5 @@ dependencies {
 
     //implementation 'com.github.delight-im:Android-SimpleLocation:v1.1.0'
 
-
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }
