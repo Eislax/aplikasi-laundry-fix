@@ -64,3 +64,5 @@ dependencies {
 
     // Location
     implementation 'com.github.delight-im:Android-SimpleLocation:v1.1.0'
+
+}
