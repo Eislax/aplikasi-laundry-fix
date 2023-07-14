@@ -117,13 +117,14 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="Azhar, Periksa Riwayat Pesananmu"
+                    android:text="Murad, Periksa Riwayat Pesananmu"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 
             </LinearLayout>
 
         </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 
