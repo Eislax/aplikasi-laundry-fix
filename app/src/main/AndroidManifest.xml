@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="s">
         <activity
+            android:name=".view.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.main.MainActivity"
             android:exported="true" />
         <activity
@@ -43,7 +46,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

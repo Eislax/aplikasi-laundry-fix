@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 
 import com.latihanpbo.aplikasilaundryfix.R;
+import com.latihanpbo.aplikasilaundryfix.view.login.LoginActivity;
 import com.latihanpbo.aplikasilaundryfix.view.main.MainActivity;
 
 public class splashScreenActivity extends AppCompatActivity {
@@ -41,7 +42,7 @@ public class splashScreenActivity extends AppCompatActivity {
                 }catch (Exception e){
                     System.out.println("EXc=" + e);
                 } finally {
-                    Intent intent = new Intent(splashScreenActivity.this, MainActivity.class);
+                    Intent intent = new Intent(splashScreenActivity.this, LoginActivity.class);
                     finish();
                     startActivity(intent);
                 }
