@@ -17,22 +17,25 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="s">
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.history.HistoryActivity"
+            android:name=".view.main.MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.cucibasah.CuciBasahActivity"
+            android:name=".view.history.HistoryActivity"
             android:exported="true" />
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.dryclean.DryCleanActivity"
+            android:name=".view.cucibasah.CuciBasahActivity"
             android:exported="true" />
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.ironing.IroningActivity"
+            android:name=".view.dryclean.DryCleanActivity"
             android:exported="true" />
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.premiumwash.PremiumWashActivity"
+            android:name=".view.ironing.IroningActivity"
             android:exported="true" />
         <activity
-            android:name="com.latihanpbo.aplikasilaundryfix.view.main.MainActivity"
+            android:name=".view.premiumwash.PremiumWashActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.splashScreen.splashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
