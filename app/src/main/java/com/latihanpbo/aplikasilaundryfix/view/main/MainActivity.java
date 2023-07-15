@@ -23,6 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.latihanpbo.aplikasilaundryfix.R;
 import com.latihanpbo.aplikasilaundryfix.view.cucibasah.CuciBasahActivity;
 import com.latihanpbo.aplikasilaundryfix.view.dryclean.DryCleanActivity;
@@ -39,7 +41,7 @@ import java.util.List;
 
 
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity {
 
     int REQ_PERMISSION = 100;
     double strCurrentLatitude;
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         setLocation();
         setInitLayout();
         setMenu();
-        getLocationViewModel();
+//        getLocationViewModel();
     }
 
     private void setLocation() {
@@ -86,21 +88,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void setInitLayout() {
         rvMenu = findViewById(R.id.rvMenu);
-        rvRekomendasi = findViewById(R.id.rvRekomendasi);
+//        rvRekomendasi = findViewById(R.id.rvRekomendasi);
         layoutHistory = findViewById(R.id.layoutHistory);
 
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Mohon Tunggu…");
-        progressDialog.setCancelable(false);
-        progressDialog.setMessage("sedang menampilkan lokasi");
+//        progressDialog = new ProgressDialog(this);
+//        progressDialog.setTitle("Mohon Tunggu…");
+//        progressDialog.setCancelable(false);
+//        progressDialog.setMessage("sedang menampilkan lokasi");
 
         rvMenu.setLayoutManager(new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false));
         rvMenu.setHasFixedSize(true);
 
-        mainAdapter = new MainAdapter(this);
-        rvRekomendasi.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        rvRekomendasi.setAdapter(mainAdapter);
-        rvRekomendasi.setHasFixedSize(true);
+//        mainAdapter = new MainAdapter(this);
+//        rvRekomendasi.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+//        rvRekomendasi.setAdapter(mainAdapter);
+//        rvRekomendasi.setHasFixedSize(true);
 
         layoutHistory.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
@@ -127,23 +129,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-        this.mapsView = googleMap;
+//    @Override
+//    public void onMapReady(@NonNull GoogleMap googleMap) {
+//        this.mapsView = googleMap;
+//
+//        //viewmodel
+//        getLocationViewModel();
+//    }
 
-        //viewmodel
-        getLocationViewModel();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQ_PERMISSION && resultCode == RESULT_OK) {
-
-            //load viewmodel
-            getLocationViewModel();
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == REQ_PERMISSION && resultCode == RESULT_OK) {
+//
+//            //load viewmodel
+//            getLocationViewModel();
+//        }
+//    }
 
     private void setStatusbar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -201,20 +203,46 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         window.setAttributes(layoutParams);
     }
 
-    private void getLocationViewModel() {
-        mainViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MainViewModel.class);
-        mainViewModel.setMarkerLocation(strCurrentLocation);
-        progressDialog.show();
-        mainViewModel.getMarkerLocation().observe(this, modelResults -> {
-            if (modelResults.size() != 0) {
-                mainAdapter.setLocationAdapter(modelResults);
-                progressDialog.dismiss();
-            } else {
-                progressDialog.show();
-            }
-            progressDialog.dismiss();
-        });
+//    private void getLocationViewModel() {
+//        mainViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MainViewModel.class);
+//        mainViewModel.setMarkerLocation(strCurrentLocation);
+//        progressDialog.show();
+//        mainViewModel.getMarkerLocation().observe(this, modelResults -> {
+//            if (modelResults.size() != 0) {
+//                mainAdapter.setLocationAdapter(modelResults);
+//                progressDialog.dismiss();
+//            } else {
+//                progressDialog.show();
+//            }
+//            progressDialog.dismiss();
+//        });
+//
+//    }
 
-    }
+
+//       NavigationBarView.OnItemSelectedListener{
+//        item -> switch(item.itemId){
+//            R.id.page_1{
+//
+//            }
+//            R.id.page_2{
+//
+//            }
+//        }
+//    }
+//    BottomNavigationView.OnNavigationItemSelectedListener { item ->
+//            when(.menu.item.itemId) {
+//        R.id.page_1 -> {
+//            // Respond to navigation item 1 click
+//            true
+//        }
+//        R.id.page_2 -> {
+//            // Respond to navigation item 2 click
+//            true
+//        }
+//        else -> false
+//        }
+//    }
+
 
 }

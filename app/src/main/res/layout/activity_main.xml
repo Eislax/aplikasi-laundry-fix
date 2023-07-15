@@ -21,6 +21,15 @@
             android:layout_margin="15dp" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        android:background="@color/primary"
+        android:layout_gravity="bottom"/>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -48,50 +57,50 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/bg_circle_radius"
-                android:backgroundTint="@color/primary"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:background="@drawable/bg_circle_radius"-->
+<!--                android:backgroundTint="@color/primary"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_info" />
+<!--                <ImageView-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:src="@drawable/ic_info" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Sebagian penyedia jasa pengiriman berpotensi tidak bisa untuk sementara waktu."
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    android:text="Sebagian penyedia jasa pengiriman berpotensi tidak bisa untuk sementara waktu."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:text="Laundry Terdekat"
-                android:textColor="@color/primaryDark"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Laundry Terdekat"-->
+<!--                android:textColor="@color/primaryDark"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvRekomendasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvRekomendasi"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp" />-->
 
             <LinearLayout
                 android:id="@+id/layoutHistory"
