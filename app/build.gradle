@@ -62,11 +62,17 @@ dependencies {
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 
     // Location
-
     implementation 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
-    //implementation 'com.patloew.rxlocation:rxlocation:1.0.6'
 
-    //implementation 'com.github.delight-im:Android-SimpleLocation:v1.1.0'
 
+    //Fix Duplication Classes
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+    //Lottie Animation
+    implementation 'com.airbnb.android:lottie:6.0.1'
+
+    //Bottom Navigation Bar
+    implementation 'com.google.android.material:material:1.9.0'
+
+
 }

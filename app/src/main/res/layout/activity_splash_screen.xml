@@ -5,19 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.splashScreen.splashScreenActivity">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="600px"
+        android:layout_height="800px"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_splashscreen"
-        android:id="@+id/splashimg"
-        />
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/splashimg"
-        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_washing_machine"
         />
 
 </RelativeLayout>
