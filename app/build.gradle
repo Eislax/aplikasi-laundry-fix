@@ -69,6 +69,11 @@ dependencies {
 =======
 
     implementation 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
+<<<<<<< Updated upstream
+=======
+
+    //fix duplicate classes
+>>>>>>> Stashed changes
 
     //Fix Duplicate Classes
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
