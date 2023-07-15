@@ -8,10 +8,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,11 +60,30 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rvMenu, rvRekomendasi;
     LinearLayout layoutHistory;
     List<ModelMenu> modelMenuList = new ArrayList<>();
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Tambahkan logika untuk menangani item yang dipilih di sini
+               if (item.getItemId() == R.id.navigation_history){
+                   Intent historyIntent = new Intent(MainActivity.this, HistoryActivity.class);
+                   startActivity(historyIntent);
+                   return true;
+                } else if (item.getItemId() == R.id.navigation_profile){
+                   return true;
+               } else if (item.getItemId() == R.id.navigation_home){
+                   return true;
+               }
+                return false;
+            }
+        });
+
 
         setStatusbar();
         setPermission();
@@ -202,47 +224,6 @@ public class MainActivity extends AppCompatActivity {
         }
         window.setAttributes(layoutParams);
     }
-
-//    private void getLocationViewModel() {
-//        mainViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MainViewModel.class);
-//        mainViewModel.setMarkerLocation(strCurrentLocation);
-//        progressDialog.show();
-//        mainViewModel.getMarkerLocation().observe(this, modelResults -> {
-//            if (modelResults.size() != 0) {
-//                mainAdapter.setLocationAdapter(modelResults);
-//                progressDialog.dismiss();
-//            } else {
-//                progressDialog.show();
-//            }
-//            progressDialog.dismiss();
-//        });
-//
-//    }
-
-
-//       NavigationBarView.OnItemSelectedListener{
-//        item -> switch(item.itemId){
-//            R.id.page_1{
-//
-//            }
-//            R.id.page_2{
-//
-//            }
-//        }
-//    }
-//    BottomNavigationView.OnNavigationItemSelectedListener { item ->
-//            when(.menu.item.itemId) {
-//        R.id.page_1 -> {
-//            // Respond to navigation item 1 click
-//            true
-//        }
-//        R.id.page_2 -> {
-//            // Respond to navigation item 2 click
-//            true
-//        }
-//        else -> false
-//        }
-//    }
 
 
 }

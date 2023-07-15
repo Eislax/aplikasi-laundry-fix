@@ -2,4 +2,5 @@
     <string name="app_name">Laundry Apps</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
+    <string name="home">Home</string>
 </resources>
