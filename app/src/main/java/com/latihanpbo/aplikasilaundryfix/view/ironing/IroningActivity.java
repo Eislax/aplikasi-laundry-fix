@@ -44,6 +44,8 @@ public class IroningActivity extends AppCompatActivity {
     TextView tvTitle, tvInfo, tvJumlahBarang, tvTotalPrice, tvKaos, tvCelana, tvJaket, tvSprei, tvKarpet,
             tvPriceKaos, tvPriceCelana, tvPriceJaket, tvPriceSprei, tvPriceKarpet;
 
+    androidx.appcompat.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,14 @@ public class IroningActivity extends AppCompatActivity {
         setDataKarpet();
         setInputData();
         getCurrentLocation();
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setLocation() {

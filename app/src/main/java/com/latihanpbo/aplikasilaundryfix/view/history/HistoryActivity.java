@@ -31,6 +31,8 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     RecyclerView rvHistory;
     TextView tvNotFound;
 
+    androidx.appcompat.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,14 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         setStatusbar();
         setInitLayout();
         setViewModel();
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setStatusbar() {
