@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     private void setInitLayout() {
         rvMenu = findViewById(R.id.rvMenu);
 //        rvRekomendasi = findViewById(R.id.rvRekomendasi);
-        layoutHistory = findViewById(R.id.layoutHistory);
+//        layoutHistory = findViewById(R.id.layoutHistory);
 
 //        progressDialog = new ProgressDialog(this);
 //        progressDialog.setTitle("Mohon Tunggu…");
@@ -126,10 +126,10 @@ public class MainActivity extends AppCompatActivity {
 //        rvRekomendasi.setAdapter(mainAdapter);
 //        rvRekomendasi.setHasFixedSize(true);
 
-        layoutHistory.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
-            startActivity(intent);
-        });
+//        layoutHistory.setOnClickListener(v -> {
+//            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+//            startActivity(intent);
+//        });
     }
 
     private void setPermission() {
