@@ -17,6 +17,7 @@ public class DatabaseClient {
                 .build();
     }
 
+
     public static synchronized DatabaseClient getInstance(Context context) {
         if (mInstance == null) {
             mInstance = new DatabaseClient(context);
