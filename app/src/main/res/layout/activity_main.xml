@@ -262,12 +262,9 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
-<<<<<<< HEAD
-                        android:src="@drawable/ic_premium_wash"
+                        android:src="@drawable/ic_setrika"
                         android:id="@+id/setrika"/>
-=======
-                        android:src="@drawable/ic_setrika"/>
->>>>>>> 56faf76d898e753c44e8ae080a2a81dc7a550c70
+
                 </androidx.cardview.widget.CardView>
 
 
