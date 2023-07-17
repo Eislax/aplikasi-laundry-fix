@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,10 @@ import com.latihanpbo.aplikasilaundryfix.R;
 import com.latihanpbo.aplikasilaundryfix.view.cucibasah.CuciBasahActivity;
 import com.latihanpbo.aplikasilaundryfix.view.dryclean.DryCleanActivity;
 import com.latihanpbo.aplikasilaundryfix.view.history.HistoryActivity;
+import com.latihanpbo.aplikasilaundryfix.view.informasi.cucibasah_informasi;
+import com.latihanpbo.aplikasilaundryfix.view.informasi.dryCleaning_informasi;
+import com.latihanpbo.aplikasilaundryfix.view.informasi.premiumWash_informasi;
+import com.latihanpbo.aplikasilaundryfix.view.informasi.setrika_informasi;
 import com.latihanpbo.aplikasilaundryfix.view.ironing.IroningActivity;
 import com.latihanpbo.aplikasilaundryfix.view.premiumwash.PremiumWashActivity;
 import com.latihanpbo.aplikasilaundryfix.view.profile.ProfileActivity;
@@ -53,10 +59,59 @@ public class MainActivity extends AppCompatActivity {
     List<ModelMenu> modelMenuList = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
 
+
+    ImageView cuciBsh, dry, premium, setrika;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Pindah ke Halaman cuci basah
+        cuciBsh = findViewById(R.id.cuciBsh);
+        cuciBsh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(MainActivity.this, cucibasah_informasi.class);
+                startActivity(pindah);
+            }
+        });
+
+
+        //pindah ke halaman dry cleaning
+        dry = findViewById(R.id.dryCln);
+        dry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(MainActivity.this, dryCleaning_informasi.class);
+                startActivity(pindah);
+            }
+        });
+
+
+        // Pindah ke halaman premium wash
+        premium = findViewById(R.id.PremiunWash);
+        premium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(MainActivity.this, premiumWash_informasi.class);
+                startActivity(pindah);
+            }
+        });
+
+
+        // Pindah ke halaman setrika
+        setrika = findViewById(R.id.setrika);
+        setrika.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(MainActivity.this, setrika_informasi.class);
+                startActivity(pindah);
+            }
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

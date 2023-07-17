@@ -175,7 +175,8 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
-                        android:src="@drawable/ic_cuci_basah"/>
+                        android:src="@drawable/ic_cuci_basah"
+                        android:id="@+id/cuciBsh"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -203,7 +204,8 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
-                        android:src="@drawable/ic_dry_cleaning"/>
+                        android:src="@drawable/ic_dry_cleaning"
+                        android:id="@+id/dryCln"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -231,7 +233,8 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
-                        android:src="@drawable/ic_premium_wash"/>
+                        android:src="@drawable/ic_premium_wash"
+                        android:id="@+id/PremiunWash"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -259,7 +262,8 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
-                        android:src="@drawable/ic_premium_wash"/>
+                        android:src="@drawable/ic_premium_wash"
+                        android:id="@+id/setrika"/>
                 </androidx.cardview.widget.CardView>
 
 

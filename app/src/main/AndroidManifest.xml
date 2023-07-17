@@ -17,6 +17,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="s">
         <activity
+            android:name=".view.informasi.setrika_informasi"
+            android:exported="false" />
+        <activity
+            android:name=".view.informasi.premiumWash_informasi"
+            android:exported="false" />
+        <activity
+            android:name=".view.informasi.dryCleaning_informasi"
+            android:exported="false" />
+        <activity
+            android:name=".view.informasi.cucibasah_informasi"
+            android:exported="false" />
+        <activity
             android:name=".view.profile.ProfileActivity"
             android:exported="false" />
         <activity
