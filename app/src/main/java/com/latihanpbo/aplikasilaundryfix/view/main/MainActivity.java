@@ -2,39 +2,30 @@ package com.latihanpbo.aplikasilaundryfix.view.main;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.latihanpbo.aplikasilaundryfix.R;
 import com.latihanpbo.aplikasilaundryfix.view.cucibasah.CuciBasahActivity;
 import com.latihanpbo.aplikasilaundryfix.view.dryclean.DryCleanActivity;
 import com.latihanpbo.aplikasilaundryfix.view.history.HistoryActivity;
 import com.latihanpbo.aplikasilaundryfix.view.ironing.IroningActivity;
 import com.latihanpbo.aplikasilaundryfix.view.premiumwash.PremiumWashActivity;
-import com.latihanpbo.aplikasilaundryfix.viewmodel.MainViewModel;
+import com.latihanpbo.aplikasilaundryfix.view.profile.ProfileActivity;
 
 import im.delight.android.location.SimpleLocation;
 
@@ -50,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
     double strCurrentLatitude;
     double strCurrentLongitude;
     String strCurrentLocation;
-    GoogleMap mapsView;
+//    GoogleMap mapsView;
     SimpleLocation simpleLocation;
-    ProgressDialog progressDialog;
-    MainViewModel mainViewModel;
+//    ProgressDialog progressDialog;
+//    MainViewModel mainViewModel;
     MenuAdapter menuAdapter;
-    MainAdapter mainAdapter;
+//    MainAdapter mainAdapter;
     ModelMenu modelMenu;
     RecyclerView rvMenu, rvRekomendasi;
-    LinearLayout layoutHistory;
+//    LinearLayout layoutHistory;
     List<ModelMenu> modelMenuList = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
 
@@ -76,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                    startActivity(historyIntent);
                    return true;
                 } else if (item.getItemId() == R.id.navigation_profile){
+                   Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
+                   startActivity(profileIntent);
                    return true;
                } else if (item.getItemId() == R.id.navigation_home){
                    return true;
