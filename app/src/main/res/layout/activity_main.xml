@@ -162,7 +162,7 @@
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     app:cardCornerRadius="10dp"
-                    app:cardElevation="3dp">
+                    app:cardElevation="5dp">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     app:cardCornerRadius="10dp"
-                    app:cardElevation="3dp">
+                    app:cardElevation="5dp">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -220,7 +220,7 @@
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     app:cardCornerRadius="10dp"
-                    app:cardElevation="3dp">
+                    app:cardElevation="5dp">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -249,7 +249,7 @@
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     app:cardCornerRadius="10dp"
-                    app:cardElevation="3dp">
+                    app:cardElevation="5dp">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -262,8 +262,12 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxHeight="63dp"
+<<<<<<< HEAD
                         android:src="@drawable/ic_premium_wash"
                         android:id="@+id/setrika"/>
+=======
+                        android:src="@drawable/ic_setrika"/>
+>>>>>>> 56faf76d898e753c44e8ae080a2a81dc7a550c70
                 </androidx.cardview.widget.CardView>
 
 
