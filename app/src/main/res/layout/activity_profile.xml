@@ -76,7 +76,7 @@
                 android:background="@drawable/circle"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/pics" />
+                android:src="@drawable/murad" />
 
         </RelativeLayout>
 
