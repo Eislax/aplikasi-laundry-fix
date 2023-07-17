@@ -17,19 +17,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Lengkap"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="100px"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"/>
 
         <EditText
             android:id="@+id/birthdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tanggal Lahir"/>
+            android:hint="Tanggal Lahir"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"/>
 
         <EditText
             android:id="@+id/txt_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Pengguna"/>
+            android:hint="Nama Pengguna"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"/>
 
         <EditText
             android:id="@+id/txt_password"
@@ -37,7 +46,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_username"
-            android:hint="Kata Sandi"/>
+            android:hint="Kata Sandi"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"/>
 
         <Button
             android:id="@+id/registerBtn"
@@ -47,7 +59,10 @@
             android:layout_below="@+id/txt_password"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="27dp"/>
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="200px"
+            android:layout_marginLeft="200px"
+            android:background="@color/primary"/>
 
         <TextView
             android:id="@+id/loginBtn"
@@ -55,7 +70,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Sudah memiliki akun"/>
+            android:text="Sudah memiliki akun ? Login"/>
 
     </LinearLayout>
 
