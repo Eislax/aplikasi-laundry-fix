@@ -1,35 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.informasi.premiumWash_informasi"
-    android:layout_margin="20dp">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/premiumjudul"
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/ic_person_fix"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Edit Profile"-->
+    <!--        android:layout_marginTop="150dp"/>-->
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Logout"/>-->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Informasi Premium Wash"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
-    <TextView
-        android:id="@+id/dryIsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ini adalah informasi mengenai cuci basah. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        android:layout_marginTop="16dp"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@id/premiumjudul"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:navigationIcon="@drawable/ic_back">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                android:text="Riwayat Laundry"-->
+            <!--                android:textColor="@color/primaryDark"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold" />-->
+
+            <!--        </RelativeLayout>-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rellay1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/grad"-->
+    <!--        android:paddingBottom="20dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/imgUser"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:background="@drawable/circle_border">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="120dp"-->
+    <!--                android:layout_height="120dp"-->
+    <!--                android:layout_margin="9dp"-->
+    <!--                android:adjustViewBounds="true"-->
+    <!--                android:background="@drawable/circle"-->
+    <!--                android:padding="3dp"-->
+    <!--                android:scaleType="centerInside"-->
+    <!--                android:src="@drawable/pics" />-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/imgUser"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginTop="15sp"-->
+    <!--            android:fontFamily="sans-serif-light"-->
+    <!--            android:text="Mr. Peter"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="32sp" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginTop="30dp">-->
+
+    <!--        <Button-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Edit Profile"/>-->
+    <!--        <Button-->
+    <!--            android:id="@+id/logout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Logout"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cuciJdl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Informasi Premium Wash"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/informasi"
+            android:layout_below="@+id/cuciJdl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Kami menawarkan layanan premium wash yang eksklusif dan ramah lingkungan untuk berbagai jenis pakaian dan perlengkapan rumah tangga, termasuk kaos, jeans, jaket, bedcover, dan karpet. Dalam metode ini, kami menggunakan bahan kimia yang ramah lingkungan untuk membersihkan secara efektif, tanpa merusak serat kain. Kami juga memberikan treatment khusus sesuai kebutuhan pakaian Anda. Dengan pelayanan sepenuh hati dari tim terlatih kami, kami menjamin kepuasan pelanggan dan kualitas yang terjaga. Anda dapat mengandalkan Laundry Kami untuk memberikan perlakuan eksklusif yang memberikan hasil maksimal bagi pakaian dan perlengkapan rumah tangga Anda."
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/cuciJdl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+
+
+</LinearLayout>
