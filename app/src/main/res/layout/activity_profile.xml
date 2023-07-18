@@ -96,7 +96,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
-            android:text="Aldi Murad S"
+            android:text="Aldi Murad R"
             android:textColor="@color/white"
             android:textSize="32sp" />
 
