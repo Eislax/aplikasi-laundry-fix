@@ -1,8 +1,10 @@
 package com.latihanpbo.aplikasilaundryfix.view.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +23,10 @@ public class RegisterActivity extends AppCompatActivity {
     TextView loginButton;
     Button registerButton;
 
+    CardView cardView;
+
+    Drawable drawable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,10 @@ public class RegisterActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.loginBtn);
 
         loginButton = findViewById(R.id.loginBtn);
+
+        cardView = findViewById(R.id.my_card_view);
+        drawable = getResources().getDrawable(R.drawable.card_login_color);
+        cardView.setBackground(drawable);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
