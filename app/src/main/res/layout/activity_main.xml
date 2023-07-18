@@ -264,11 +264,7 @@
                         android:maxHeight="63dp"
                         android:src="@drawable/ic_setrika"
                         android:id="@+id/setrika"/>
-
                 </androidx.cardview.widget.CardView>
-
-
-
 
             </LinearLayout>
 

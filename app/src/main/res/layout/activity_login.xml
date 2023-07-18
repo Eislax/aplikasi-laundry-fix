@@ -4,71 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/navcolor"
     tools:context=".view.login.LoginActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-<!--        <ImageView-->
-<!--            android:layout_width="150sp"-->
-<!--            android:layout_height="150sp"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:layout_marginBottom="30dp"-->
-<!--            android:src="@drawable/"/>-->
-
-        <EditText
-            android:id="@+id/txt_username"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/my_card_view"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:layout_marginTop="100px"
-            android:layout_marginLeft="100px"
-            android:layout_marginRight="100px"
-            android:layout_marginBottom="50px"/>
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
 
-        <EditText
-            android:id="@+id/txt_password"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:hint="Password"
-            android:layout_marginTop="50px"
-            android:layout_marginLeft="100px"
-            android:layout_marginRight="100px"
-            android:layout_marginBottom="50px"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:layout_below="@+id/txt_password"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="100px"
-            android:layout_marginLeft="100px"
-            android:background="@color/primary"/>
+                <!-- Tambahkan konten EditText, Button, TextView di dalam CardView -->
 
-        <TextView
-            android:id="@+id/forget_password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Forgot Password"
-            android:layout_marginTop="20dp"/>
+                <EditText
+                    android:id="@+id/txt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:layout_marginTop="100px"
+                    android:layout_marginLeft="100px"
+                    android:layout_marginRight="100px"
+                    android:layout_marginBottom="50px"/>
 
-        <TextView
-            android:id="@+id/signup_reg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Don't have account? Sign Up Here!"/>
+                <EditText
+                    android:id="@+id/txt_password"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_username"
+                    android:hint="Password"
+                    android:layout_marginTop="50px"
+                    android:layout_marginLeft="100px"
+                    android:layout_marginRight="100px"
+                    android:layout_marginBottom="50px"/>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/txt_password"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="100px"
+                    android:layout_marginLeft="100px"
+                    android:background="@drawable/button_login"/>
+
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Forgot Password"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/signup_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Don't have account? Sign Up Here!"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

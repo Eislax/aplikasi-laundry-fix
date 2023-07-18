@@ -29,7 +29,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mr. Peter"
+            android:layout_marginStart="2dp"
+            android:text="Aldi Murad R"
             android:textColor="@color/gray"
             android:textSize="16sp" />
 

@@ -27,5 +27,8 @@
     <color name="followingBg">#49BEFF</color>
     <color name="grey">#E5E5E5</color>
 
+    <color name="card_gradient_start">#ace1f2</color>
+    <color name="card_gradient_end">#ffff</color>
+
 
 </resources>

@@ -1,9 +1,11 @@
 package com.latihanpbo.aplikasilaundryfix.view.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,10 @@ public class LoginActivity extends AppCompatActivity {
     Button login;
     TextView signup;
 
+    CardView cardView;
+
+    Drawable drawable;
+
 
 
 
@@ -37,11 +43,17 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.button);
         signup = findViewById(R.id.signup_reg);
 
+        cardView = findViewById(R.id.my_card_view);
+        drawable = getResources().getDrawable(R.drawable.card_login_color);
+        cardView.setBackground(drawable);
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String usernameS = username.getText().toString();
                 String passwordS = password.getText().toString();
+
 
                 if(usernameS.isEmpty() || passwordS.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Pastikan Anda sudah mengisi username dan password",Toast.LENGTH_SHORT).show();

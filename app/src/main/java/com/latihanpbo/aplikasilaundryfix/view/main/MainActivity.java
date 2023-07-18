@@ -112,17 +112,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 // Tambahkan logika untuk menangani item yang dipilih di sini
                if (item.getItemId() == R.id.navigation_history){
                    Intent historyIntent = new Intent(MainActivity.this, HistoryActivity.class);
+                   finish();
                    startActivity(historyIntent);
                    return true;
                 } else if (item.getItemId() == R.id.navigation_profile){
                    Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
+                   finish();
                    startActivity(profileIntent);
                    return true;
                } else if (item.getItemId() == R.id.navigation_home){
