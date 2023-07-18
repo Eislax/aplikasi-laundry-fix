@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.latihanpbo.aplikasilaundryfix.R;
 import com.latihanpbo.aplikasilaundryfix.model.ModelLaundry;
 import com.latihanpbo.aplikasilaundryfix.view.main.MainActivity;
@@ -52,6 +53,32 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         setInitLayout();
         setViewModel();
 
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_history);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Tambahkan logika untuk menangani item yang dipilih di sini
+                if (item.getItemId() == R.id.navigation_history){
+                    return true;
+                } else if (item.getItemId() == R.id.navigation_profile){
+                    Intent profileIntent = new Intent(HistoryActivity.this, ProfileActivity.class);
+                    finish();
+                    startActivity(profileIntent);
+                    return true;
+                } else if (item.getItemId() == R.id.navigation_home){
+                    Intent mainIntent = new Intent(HistoryActivity.this, MainActivity.class);
+                    finish();
+                    startActivity(mainIntent);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
+
+
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +93,12 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
                 // Tambahkan logika untuk menangani item yang dipilih di sini
                 if (item.getItemId() == R.id.navigation_home){
                     Intent historyIntent = new Intent(HistoryActivity.this, MainActivity.class);
+                    finish();
                     startActivity(historyIntent);
                     return true;
                 } else if (item.getItemId() == R.id.navigation_profile){
                     Intent profileIntent = new Intent(HistoryActivity.this, ProfileActivity.class);
+                    finish();
                     startActivity(profileIntent);
                     return true;
                 } else if (item.getItemId() == R.id.navigation_history){

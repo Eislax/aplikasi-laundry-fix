@@ -6,14 +6,6 @@
     android:background="@color/white"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_navigation"
-        app:menu="@menu/bottom_navigation_menu"
-        app:itemTextColor="@color/white"
-        android:background="@drawable/navcolor"
-        android:layout_gravity="bottom"/>
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -77,5 +69,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        android:background="@drawable/navcolor"
+        android:layout_gravity="bottom"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
