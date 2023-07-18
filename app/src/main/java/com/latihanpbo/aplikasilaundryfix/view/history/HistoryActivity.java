@@ -1,23 +1,29 @@
 package com.latihanpbo.aplikasilaundryfix.view.history;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.latihanpbo.aplikasilaundryfix.R;
 import com.latihanpbo.aplikasilaundryfix.model.ModelLaundry;
+import com.latihanpbo.aplikasilaundryfix.view.main.MainActivity;
+import com.latihanpbo.aplikasilaundryfix.view.profile.ProfileActivity;
 import com.latihanpbo.aplikasilaundryfix.viewmodel.LaundryViewModel;
 
 import java.util.ArrayList;
@@ -31,12 +37,16 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     RecyclerView rvHistory;
     TextView tvNotFound;
 
+    BottomNavigationView bottomNavigationView;
+
     androidx.appcompat.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         setStatusbar();
         setInitLayout();
@@ -49,6 +59,26 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
                 onBackPressed();
             }
         });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Tambahkan logika untuk menangani item yang dipilih di sini
+                if (item.getItemId() == R.id.navigation_home){
+                    Intent historyIntent = new Intent(HistoryActivity.this, MainActivity.class);
+                    startActivity(historyIntent);
+                    return true;
+                } else if (item.getItemId() == R.id.navigation_profile){
+                    Intent profileIntent = new Intent(HistoryActivity.this, ProfileActivity.class);
+                    startActivity(profileIntent);
+                    return true;
+                } else if (item.getItemId() == R.id.navigation_history){
+                    return true;
+                }
+                return false;
+            }
+        });
+
     }
 
     private void setStatusbar() {
