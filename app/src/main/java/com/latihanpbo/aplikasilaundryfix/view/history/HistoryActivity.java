@@ -40,7 +40,7 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
 
     BottomNavigationView bottomNavigationView;
 
-    androidx.appcompat.widget.Toolbar toolbar;
+//    androidx.appcompat.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,13 +79,13 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
 
 
 
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+//        toolbar = findViewById(R.id.toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                onBackPressed();
+//            }
+//        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

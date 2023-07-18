@@ -18,19 +18,19 @@ import com.latihanpbo.aplikasilaundryfix.view.main.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity {
     Button logout;
-    Toolbar toolbar;
+//    Toolbar toolbar;
     BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+//        toolbar = findViewById(R.id.toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                onBackPressed();
+//            }
+//        });
 
         logout = findViewById(R.id.logout);
 
