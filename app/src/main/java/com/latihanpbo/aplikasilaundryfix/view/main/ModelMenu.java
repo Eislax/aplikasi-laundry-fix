@@ -1,6 +1,7 @@
 package com.latihanpbo.aplikasilaundryfix.view.main;
 
 
+
 public class ModelMenu {
 
     String tvTitle;

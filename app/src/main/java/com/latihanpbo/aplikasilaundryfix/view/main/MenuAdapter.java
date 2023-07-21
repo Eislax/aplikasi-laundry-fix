@@ -15,6 +15,7 @@ import com.latihanpbo.aplikasilaundryfix.R;
 import java.util.List;
 
 
+
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder>{
 
     private OnItemClickListener listener;

@@ -16,6 +16,7 @@ import com.latihanpbo.aplikasilaundryfix.utils.FunctionHelper;
 import java.util.List;
 
 
+
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
 
     List<ModelLaundry> modelInputList;

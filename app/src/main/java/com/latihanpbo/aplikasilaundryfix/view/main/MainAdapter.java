@@ -16,6 +16,7 @@ import com.latihanpbo.aplikasilaundryfix.model.nearby.ModelResults;
 
 import java.util.ArrayList;
 
+
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
 
     ArrayList<ModelResults> modelResultArrayList = new ArrayList<>();
