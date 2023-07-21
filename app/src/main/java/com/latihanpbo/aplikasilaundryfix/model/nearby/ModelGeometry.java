@@ -3,6 +3,7 @@ package com.latihanpbo.aplikasilaundryfix.model.nearby;
 import com.google.gson.annotations.SerializedName;
 
 
+
 public class ModelGeometry {
 
     @SerializedName("location")

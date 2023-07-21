@@ -18,7 +18,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-
 public class MainViewModel extends ViewModel {
 
     MutableLiveData<ArrayList<ModelResults>> modelResultsMutableLiveData = new MutableLiveData<>();

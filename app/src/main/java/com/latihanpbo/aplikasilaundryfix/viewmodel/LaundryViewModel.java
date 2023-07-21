@@ -16,6 +16,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
+
 public class    LaundryViewModel extends AndroidViewModel {
 
     LiveData<List<ModelLaundry>> mModelLaundry;

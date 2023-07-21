@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
+
 public class ModelResults implements Serializable {
 
     @SerializedName("geometry")

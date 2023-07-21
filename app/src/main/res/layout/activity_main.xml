@@ -1,18 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        android:background="@drawable/navcolor"
+        android:layout_gravity="bottom"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wavebackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Kategori"
+                android:textColor="@color/primaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_marginEnd="15dp"-->
+            <!--                android:background="@drawable/bg_circle_radius"-->
+            <!--                android:backgroundTint="@color/primary"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="30dp"-->
+            <!--                    android:layout_height="30dp"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:src="@drawable/ic_info" />-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:layout_marginEnd="20dp"-->
+            <!--                    android:text="Sebagian penyedia jasa pengiriman berpotensi tidak bisa untuk sementara waktu."-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:text="Laundry Terdekat"-->
+            <!--                android:textColor="@color/primaryDark"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold" />-->
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/rvRekomendasi"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="5dp" />-->
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/layoutHistory"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_marginEnd="15dp"-->
+            <!--                android:background="@drawable/bg_circle_radius"-->
+            <!--                android:backgroundTint="@color/primary"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="40dp"-->
+            <!--                    android:layout_height="40dp"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:src="@drawable/ic_shop" />-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:layout_marginEnd="20dp"-->
+            <!--                    android:text="Murad, Periksa Riwayat Pesananmu"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Informasi"
+                android:textColor="@color/primaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxHeight="63dp"
+                        android:src="@drawable/ic_cuci_basah"
+                        android:id="@+id/cuciBsh"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxHeight="63dp"
+                        android:src="@drawable/ic_dry_cleaning"
+                        android:id="@+id/dryCln"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxHeight="63dp"
+                        android:src="@drawable/ic_premium_wash"
+                        android:id="@+id/PremiunWash"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxHeight="63dp"
+                        android:src="@drawable/ic_setrika"
+                        android:id="@+id/setrika"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

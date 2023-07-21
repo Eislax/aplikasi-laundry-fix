@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wavebackground"
+    tools:context=".view.informasi.setrika_informasi"
+    android:orientation="vertical">
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/ic_person_fix"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Edit Profile"-->
+    <!--        android:layout_marginTop="150dp"/>-->
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Logout"/>-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:navigationIcon="@drawable/ic_back">
+
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                android:text="Riwayat Laundry"-->
+            <!--                android:textColor="@color/primaryDark"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold" />-->
+
+            <!--        </RelativeLayout>-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rellay1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/grad"-->
+    <!--        android:paddingBottom="20dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/imgUser"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:background="@drawable/circle_border">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="120dp"-->
+    <!--                android:layout_height="120dp"-->
+    <!--                android:layout_margin="9dp"-->
+    <!--                android:adjustViewBounds="true"-->
+    <!--                android:background="@drawable/circle"-->
+    <!--                android:padding="3dp"-->
+    <!--                android:scaleType="centerInside"-->
+    <!--                android:src="@drawable/pics" />-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/imgUser"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginTop="15sp"-->
+    <!--            android:fontFamily="sans-serif-light"-->
+    <!--            android:text="Mr. Peter"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="32sp" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginTop="30dp">-->
+
+    <!--        <Button-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Edit Profile"/>-->
+    <!--        <Button-->
+    <!--            android:id="@+id/logout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Logout"/>-->
+
+    <!--    </LinearLayout>-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cuciJdl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Informasi Setrika"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/informasi"
+                android:layout_below="@+id/cuciJdl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Kami menyediakan layanan penyetrikaan yang efektif untuk menghilangkan kerutan dari pakaian Anda menggunakan setrika listrik dan uap. Dalam metode penyetrikaan kami, kami fokus pada kaos, jeans, dan jaket sebagai bagian dari pakaian yang dapat diberikan perawatan penyetrikaan.
+
+    Ketika pakaian Anda tiba di Laundry kami, kami memisahkan kaos, jeans, dan jaket untuk persiapan penyetrikaan. Kami menggunakan setrika listrik dengan suhu yang tepat dan papan setrika yang terjamin kebersihannya untuk menangani setiap jenis pakaian.
+Pertama, kami memastikan setrika dan papan setrika dalam kondisi baik dan bersih untuk mencegah noda atau kotoran yang bisa menodai pakaian Anda. Kami juga memperhatikan suhu setrika yang sesuai dengan jenis kain pakaian untuk menghindari kerusakan atau perubahan pada serat kain. Selanjutnya, kami menggosok setrika secara perlahan dan hati-hati pada area yang bermasalah atau berkerut pada pakaian Anda. Kami menggunakan gerakan yang halus dan presisi untuk menghilangkan kerutan dan memberikan tampilan yang rapi.
+Selain itu, kami juga menggunakan setrika uap untuk mengatasi kerutan yang lebih sulit pada kain yang lebih berat atau kaku, seperti jaket. Setrika uap menghasilkan uap panas yang membantu melunakkan serat kain dan memudahkan penghilangan kerutan tanpa merusak bahan. Penting untuk dicatat bahwa kami sangat berhati-hati dalam melakukan penyetrikaan dan mengikuti petunjuk perawatan pada label pakaian. Kami mengutamakan keamanan dan kualitas pakaian Anda dalam setiap langkah proses penyetrikaan.Di Laundry kami, Anda dapat mengandalkan kami untuk menghilangkan kerutan dari kaos, jeans, dan jaket Anda dengan menggunakan setrika listrik dan uap. Kami berkomitmen untuk memberikan hasil penyetrikaan yang rapi dan memastikan pakaian Anda tetap terjaga kualitasnya."
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/cuciJdl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
